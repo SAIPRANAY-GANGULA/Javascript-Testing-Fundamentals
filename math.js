@@ -4,4 +4,7 @@ function add(a, b) {
 
 const subtract = (a, b) => a - b;
 
-module.exports = { subtract, add };
+const addAsync = (...args) => Promise.resolve(add(...args));
+const subtractAsync = (...args) => Promise.resolve(subtract(...args));
+
+module.exports = { subtract, add, subtractAsync, addAsync };
